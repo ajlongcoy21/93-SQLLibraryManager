@@ -1,0 +1,20 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "library.db"
+  },
+  "test": {
+    "dialect": "sqlite",
+    "storage": "library.db"
+  },
+  "production": {
+    "dialect": "mssql",
+    "connection":
+    {
+      "server"  : "librarybooksproject.database.windows.net",
+      "userName": "ajlongcoy21",
+      "password": "helena1291!",
+      "options": { "encrypt": true, "database": "library" }
+    }
+  }
+}

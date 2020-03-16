@@ -1,0 +1,7 @@
+//- If there are errors create a header with error message and a list of the errors that occured
+if(errors) 
+  h2.error Oops an error occurred!
+  ul.error
+    each error in errors
+      li
+        =error.message

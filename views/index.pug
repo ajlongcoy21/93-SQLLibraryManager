@@ -1,0 +1,24 @@
+extends layout
+//- entry point for index
+block content
+    p 
+        a(class='button' href='books/new') Create New Book
+    //- create a table
+    table 
+        //- add table column names
+        thead
+            tr
+                th Title
+                th Author
+                th Genre
+                th Year
+        //- add table body
+        tbody
+            //- for each book add the info to the table cells
+            each book in books
+                tr
+                    td
+                        a(href='/books/' + book.id) #{book.title}
+                    td #{book.author}
+                    td #{book.genre}
+                    td #{book.year}
