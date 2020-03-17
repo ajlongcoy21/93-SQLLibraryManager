@@ -10,9 +10,10 @@ function asyncHandler(cb)
     {
       await cb(req, res, next)
     } 
-    catch(error)
+    catch(error) // Catch error thrown
     {
-      res.status(500).send(error);
+      // send error to global error handler
+      next(error);
     }
   }
 }
@@ -86,7 +87,10 @@ router.get("/:id", asyncHandler(async (req, res) => {
     } 
     else 
     {
-      res.render("page-not-found", {title: "Page Not Found", header: "Page Not Found"}); 
+      // create custom error for non existant book id
+      let myError = new Error('Book Not Found');
+      myError.status = 500;
+      throw myError; 
     }
 
 }));

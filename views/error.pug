@@ -2,6 +2,8 @@ extends layout
 
 //- entry point for the error message
 block content
-  h1= message           //- display error message in header 1
-  h2= error.status      //- display error status in header 2
+  //- display error message in header 1
+  h1= error.message
+  //- display error status in header 2
+  h2= error.status
   pre #{error.stack}    

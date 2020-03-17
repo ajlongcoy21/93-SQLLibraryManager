@@ -41,18 +41,15 @@ app.use( (err, req, res, next) => {
 
   // render the error page
   res.status(err.status || 500);
-
-  console.log("error status: " + err.status);
   
   // Show the error page
-
   if (err.status === 500) 
   {
     res.render("error");   
   }
   else
   {
-    res.redirect("/books/error"); 
+    res.render("page-not-found", {title: "Page Not Found", header: "Page Not Found"}); 
   }
 
 });
