@@ -4,6 +4,9 @@ extends layout
 block content
   //- display error message in header 1
   h1= error.message
+  p
+        //- link back to main page
+        a(class='button' href='/books') Home
   //- display error status in header 2
   h2= error.status
   pre #{error.stack}    

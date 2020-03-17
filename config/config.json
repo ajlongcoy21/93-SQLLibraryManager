@@ -12,8 +12,8 @@
     "connection":
     {
       "server"  : "librarybooksproject.database.windows.net",
-      "userName": "ajlongcoy21",
-      "password": "helena1291!",
+      "userName": "",
+      "password": "",
       "options": { "encrypt": true, "database": "library" }
     }
   }
